@@ -27,6 +27,25 @@ const { createApp } = Vue;
 createApp ({
     data() {
         return {
+            todos: [
+                {
+                    text: 'Cucinare',
+                    done: true,
+                },
+                {
+                    text: 'Mangiare',
+                    done: true,
+                },
+                {
+                    text: 'Pulire',
+                    done: false,
+                },
+                {
+                    text: 'Fare la lavatrice',
+                    done: false,
+                }
+        ,
+            ]
 
         };
     }
