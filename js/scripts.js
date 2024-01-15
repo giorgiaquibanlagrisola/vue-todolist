@@ -27,6 +27,7 @@ const { createApp } = Vue;
 createApp ({
     data() {
         return {
+            newTodo:'',
             todos: [
                 {
                     text: 'Cucinare',
@@ -49,8 +50,15 @@ createApp ({
         };
     }, 
     methods: {
+        addTodo() {
+            this.todos.push({
+                text: this.newTodo,
+                done: false
+            });
+        },
         removeTodo(index) {
             this.todos.splice(index, 1);
-        }
+        },
+        
     }
 }).mount('#app');
