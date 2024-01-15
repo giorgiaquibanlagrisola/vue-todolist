@@ -43,10 +43,14 @@ createApp ({
                 {
                     text: 'Fare la lavatrice',
                     done: false,
-                }
-        ,
+                },
             ]
 
         };
+    }, 
+    methods: {
+        removeTodo(index) {
+            this.todos.splice(index, 1);
+        }
     }
 }).mount('#app');
